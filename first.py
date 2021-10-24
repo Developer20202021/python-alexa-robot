@@ -440,6 +440,8 @@
 
 
 
+
+
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 # thislist[2:6] it takes from index no 2 to (6-1)
 # print(thislist[2:6])
@@ -731,10 +733,212 @@ newset = set((1, 2, 3, 4))
 # print(fruits)
 
 
-# thisdict = {
-#   "brand": "Ford",
-#   "model": "Mustang",
-#   "year": 1964
-# }
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
 
 # print(thisdict["brand"])
+
+# print(thisdict.get("year"))
+# print(thisdict.keys())
+# print(thisdict.items()) it's return a tupple
+# print(thisdict.values())
+
+# thisdict.pop("model")
+# print(thisdict)
+
+
+
+# nested dictonary 
+
+# child1 = {
+#   "name" : "Emil",
+#   "year" : 2004
+# }
+# child2 = {
+#   "name" : "Tobias",
+#   "year" : 2007
+# }
+# child3 = {
+#   "name" : "Linus",
+#   "year" : 2011
+# }
+# myfamily = {
+#   "child1" : child1,
+#   "child2" : child2,
+#   "child3" : child3
+# }
+# myfamily2 = myfamily.copy()
+# print(myfamily2)
+
+
+
+
+# ternary operator 
+
+
+# a = 1
+# b = 2
+
+# # print('ok') if a>b else print('something') if a==b else print("not ok")
+# if 5 > 2: print("Five is greater than two!")
+
+
+# for loop
+# third parameret control the increment 
+# for x in range(2, 30, 3):
+#   print(x)
+
+
+
+
+# class Person :
+#        def __init__(self, fname, lname):
+#            self.fname = fname
+#            self.lname = lname
+        
+
+#          If I use underscore underscore at first of a method in a class .That means It can not be accessable by outside of the class 
+#        def __get_lname(self):
+#                return self.lname
+
+
+
+
+#        def get_property(self):
+#                return self.lname
+#                  print(f"my first name {self.fname} and my last name is {self.lname}")
+
+
+#  inheritence 
+
+
+# # pass actually when used. when We want to all properties from a superclass which is called parent and we can not set any property in the sub class if we use pass keyword.
+
+# class Student(Person) :
+#         pass
+
+# class Student(Person):
+#         def __init__(self, fname, lname,age:int, tshirt:bool=True):
+#             super().__init__(fname, lname)
+#             self.age = age
+#             self.tshirt = tshirt
+#         def get_property(self):
+#             return (f"my first name {self.fname} and my last name {self.lname} and my age is {self.age} and I have not any new T-shirt{self.tshirt} ")
+
+#              you can pass any string in this case you would not access any method .directly you can print the class based object 
+
+#         def __str__(self) :
+#            return (f"my first name {self.fname} and my last name {self.lname} and my age is {self.age} and I have not any new T-shirt{self.tshirt} ")
+
+
+# s = Student("mahadi", "hasan",23,False)
+# print(s)
+# print(s.get_property())
+# my first name mahadi and my last name hasan and my age is 23 and I have not any new T-shirtFalse
+# p = Person("mahadi", "hasan")
+# print(p.get__property())
+
+
+
+
+
+# import platform 
+# # to get all the functions as a list from a module by using the dir keyword
+# print(dir(platform))
+
+
+import datetime as dt
+
+# print(dir(dt))
+# ['MAXYEAR', 'MINYEAR', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'date', 'datetime', 'datetime_CAPI', 'sys', 'time', 'timedelta', 'timezone', 'tzinfo']
+
+# x = dt.datetime.now()
+
+# print(x.strftime("%j"))
+
+
+# import math
+# print(math.pi)
+
+
+# import json
+# x = {
+#   "name": "John",
+#   "age": 30,
+#   "city": "New York"
+# }
+# json to python convert way 
+# print(json.loads(x))
+# convert python to json 
+# print(json.dumps(x))
+
+
+
+
+
+
+
+# import pyttsx3 as tts
+
+# speaker = tts.init()
+# file = open("hello.txt")
+
+# for read a file .Read() method takes one parameter. that is that how many characters it will read from a file
+# readable = file.read()
+
+# for only one line reading 
+# readable = file.readline()
+# print(readable)
+# speaker.say(readable)
+# speaker.runAndWait()
+# print(dir(tts))
+
+# f = open("hello.txt", "rt")
+# readable = f.read()
+# print(readable)
+
+
+# a for append. it is used to append a new line. it does not delete any character from this file. but when you will use w method it's overwrite your file and delete the whole value from then it will write this text.
+# f = open("hello.txt", "a")
+# f.write("thanks for writting")
+# f.close()
+# hello my name is mahadi You can return one line by using the readline() method:thanks for writting
+
+
+
+# use the w method 
+# f = open("hello.txt", "w")
+# f.write("ows it is already deleted for my mistake")
+# # f.close() it is a good practice 
+# # ows it is already deleted for my mistake
+# f = open("hello.txt")
+# print(f.read())
+
+
+# create a new file 
+# x method is used for creating a new file 
+# f = open("common.txt", "x")
+# f.write("hello from python")
+# f.close()
+# f = open("common.txt","rt")
+# print(f.read())
+
+
+
+
+# to remove a file 
+# import os
+# if os.path.exists("common.txt"):
+#         os.remove("common.txt")
+
+
+
+
+
+
+
+        
+

@@ -1,3 +1,5 @@
+import math
+import platform
 from posixpath import commonpath
 import pyttsx3
 import pyaudio
@@ -74,6 +76,42 @@ def run_alexa ():
         talk(history)
     elif "your name" in command:
         talk("my name is Alexa.")
+    
+    elif "what is my name" in command :
+        talk("Your name is Mahadi hasan")
+
+    elif "today" in command:
+        today = datetime.datetime.now()
+        x = today.strftime("%A")
+        talk(f"today {x}")
+    elif "many days" in command:
+        today = datetime.datetime.now()
+        x = today.strftime("%j")
+        talk(f"already you passed {x} days in this year")
+
+    
+    elif "pi value" in command:
+        x = math.pi
+        print(x)
+        talk(f"pi value is {x}")
+
+
+    elif "are you robot" in command:
+        talk("Yes. but now I am used to computer software. after a few days, I will be the best robot in the world insha-allah")
+        
+    # elif "operating system i use" or "i use" in command:
+    #     x = platform.system()
+    #     talk(f"You use the {x} operating system")
+    
+   
+
+    elif "this month name" in command:
+         today = datetime.datetime.now()
+         x = today.strftime("%B")
+         talk(f"this month is {x}")
+
+
+
 
     elif "write" in command :
         talk("Please wait I am writing")
@@ -93,8 +131,9 @@ def run_alexa ():
 
 
 
-while True:
- run_alexa()
+# while True:
+
+run_alexa()
 
 
 
