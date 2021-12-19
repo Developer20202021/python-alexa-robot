@@ -2,14 +2,14 @@ import math
 import platform
 from posixpath import commonpath
 import pyttsx3
-# import pyaudio
+import pyaudio
 import speech_recognition as sr
 import pywhatkit as pk
 import datetime
 
 alexa = pyttsx3.init()
-# alexa.say('Hello My name is alexa. How can I hel You sir')
-# alexa.runAndWait()
+alexa.say('Hello My name is alexa. How can I hel You sir')
+alexa.runAndWait()
 
 
 
@@ -181,3 +181,4 @@ run_alexa()
 
 
 # def sound_receive ():
+
